@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3kQ-oj-Hly">
-                                <rect key="frame" x="159" y="404" width="96.5" height="98"/>
+                                <rect key="frame" x="159" y="403" width="96.5" height="100"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Логин" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aLg-nm-BMM">
                                         <rect key="frame" x="0.0" y="0.0" width="96.5" height="34"/>
@@ -30,7 +30,8 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxD-M5-VRw">
-                                        <rect key="frame" x="0.0" y="68" width="96.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="68" width="96.5" height="32"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <state key="normal" title="Войти"/>
                                         <connections>
                                             <action selector="buttonOneTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AtK-6h-coj"/>
