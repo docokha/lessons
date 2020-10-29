@@ -13,7 +13,6 @@
 		B7DA26682545BB6F0020333A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7DA26662545BB6F0020333A /* Main.storyboard */; };
 		B7DA266A2545BB6F0020333A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7DA26692545BB6F0020333A /* Assets.xcassets */; };
 		B7DA266D2545BB6F0020333A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7DA266B2545BB6F0020333A /* LaunchScreen.storyboard */; };
-		B7DA26762545C13C0020333A /* ViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DA26752545C13C0020333A /* ViewController1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +24,6 @@
 		B7DA26692545BB6F0020333A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7DA266C2545BB6F0020333A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7DA266E2545BB6F0020333A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B7DA26752545C13C0020333A /* ViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +59,6 @@
 				B7DA26602545BB6F0020333A /* AppDelegate.swift */,
 				B7DA26622545BB6F0020333A /* SceneDelegate.swift */,
 				B7DA26642545BB6F0020333A /* ViewController.swift */,
-				B7DA26752545C13C0020333A /* ViewController1.swift */,
 				B7DA26662545BB6F0020333A /* Main.storyboard */,
 				B7DA26692545BB6F0020333A /* Assets.xcassets */,
 				B7DA266B2545BB6F0020333A /* LaunchScreen.storyboard */,
@@ -140,7 +137,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7DA26762545C13C0020333A /* ViewController1.swift in Sources */,
 				B7DA26652545BB6F0020333A /* ViewController.swift in Sources */,
 				B7DA26612545BB6F0020333A /* AppDelegate.swift in Sources */,
 				B7DA26632545BB6F0020333A /* SceneDelegate.swift in Sources */,
@@ -291,6 +287,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RP6KG42D87;
 				INFOPLIST_FILE = Lesson1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -309,6 +306,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RP6KG42D87;
 				INFOPLIST_FILE = Lesson1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
