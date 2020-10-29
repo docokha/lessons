@@ -1,88 +1,196 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="t9n-DC-jOA">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="LpX-J5-va1">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Lesson1" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="t9n-DC-jOA" customClass="ViewController" customModule="Lesson1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mdh-eZ-WW8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3kQ-oj-Hly">
-                                <rect key="frame" x="159" y="403" width="96.5" height="100"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Логин" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aLg-nm-BMM">
-                                        <rect key="frame" x="0.0" y="0.0" width="96.5" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DKt-mk-pje">
-                                        <rect key="frame" x="0.0" y="34" width="96.5" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxD-M5-VRw">
-                                        <rect key="frame" x="0.0" y="68" width="96.5" height="32"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <state key="normal" title="Войти"/>
-                                        <connections>
-                                            <action selector="buttonOneTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AtK-6h-coj"/>
-                                            <segue destination="YMw-98-58P" kind="show" id="6VH-Pm-HA9"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="passwordInput" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jFA-O2-ZAo">
+                                <rect key="frame" x="44" y="386" width="326" height="34"/>
+                                <accessibility key="accessibilityConfiguration" identifier="passwordInput"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k5Y-Mg-4Ke">
+                                <rect key="frame" x="39" y="437" width="337" height="30"/>
+                                <state key="normal" title="Войти"/>
+                                <connections>
+                                    <action selector="TapButtonOne:" destination="t9n-DC-jOA" eventType="touchUpInside" id="i9r-FS-UG0"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Логин" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vsb-G6-1Ow">
+                                <rect key="frame" x="44" y="335" width="326" height="34"/>
+                                <accessibility key="accessibilityConfiguration" identifier="loginInput"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="27U-yT-zzp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="3kQ-oj-Hly" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Nzg-65-dpP"/>
-                            <constraint firstItem="3kQ-oj-Hly" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="tkd-HO-G85"/>
+                            <constraint firstItem="vsb-G6-1Ow" firstAttribute="leading" secondItem="27U-yT-zzp" secondAttribute="leading" constant="44" id="7fy-UO-dKO"/>
+                            <constraint firstItem="k5Y-Mg-4Ke" firstAttribute="top" secondItem="jFA-O2-ZAo" secondAttribute="bottom" constant="18" id="C3b-kg-VVI"/>
+                            <constraint firstItem="k5Y-Mg-4Ke" firstAttribute="centerX" secondItem="27U-yT-zzp" secondAttribute="centerX" id="F4b-jL-I13"/>
+                            <constraint firstItem="jFA-O2-ZAo" firstAttribute="top" secondItem="vsb-G6-1Ow" secondAttribute="bottom" constant="17" id="Ixg-dO-kjR"/>
+                            <constraint firstItem="k5Y-Mg-4Ke" firstAttribute="centerY" secondItem="27U-yT-zzp" secondAttribute="centerY" id="Jdf-Ek-qac"/>
+                            <constraint firstItem="jFA-O2-ZAo" firstAttribute="leading" secondItem="27U-yT-zzp" secondAttribute="leading" constant="44" id="L67-zI-pd6"/>
+                            <constraint firstItem="27U-yT-zzp" firstAttribute="trailing" secondItem="jFA-O2-ZAo" secondAttribute="trailing" constant="44" id="Pkb-JA-q67"/>
+                            <constraint firstItem="27U-yT-zzp" firstAttribute="trailing" secondItem="vsb-G6-1Ow" secondAttribute="trailing" constant="44" id="bbd-lk-vwQ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginInput" destination="vsb-G6-1Ow" id="3DD-Ug-gYo"/>
+                        <outlet property="passwordInput" destination="jFA-O2-ZAo" id="1JS-4F-VQV"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ddX-em-ruv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="94"/>
+            <point key="canvasLocation" x="-457" y="56"/>
         </scene>
-        <!--View Controller1-->
-        <scene sceneID="fuM-E6-Nry">
+        <!--Сообщества-->
+        <scene sceneID="Uep-RY-Gof">
             <objects>
-                <viewController storyboardIdentifier="ViewController1" id="YMw-98-58P" customClass="ViewController1" customModule="Lesson1" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bFw-9U-sYc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                <viewController id="jeN-kt-ezs" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AtU-AX-Jx3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ура! Вы перешли на новый экран" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diL-jF-yJV">
-                                <rect key="frame" x="54" y="392" width="306" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8km-cI-j0U">
+                                <rect key="frame" x="127" y="433" width="161" height="30"/>
+                                <state key="normal" title="Переход на новое вью"/>
+                                <connections>
+                                    <segue destination="c33-Eu-auh" kind="show" id="Fcz-yP-Unn"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="MZ0-we-2bI"/>
+                        <viewLayoutGuide key="safeArea" id="UXa-sl-pDx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="diL-jF-yJV" firstAttribute="centerX" secondItem="MZ0-we-2bI" secondAttribute="centerX" id="5QK-ge-Nhr"/>
-                            <constraint firstItem="diL-jF-yJV" firstAttribute="centerY" secondItem="MZ0-we-2bI" secondAttribute="centerY" id="HwL-ag-KnM"/>
+                            <constraint firstItem="8km-cI-j0U" firstAttribute="centerX" secondItem="UXa-sl-pDx" secondAttribute="centerX" id="0nO-d1-vzT"/>
+                            <constraint firstItem="8km-cI-j0U" firstAttribute="centerY" secondItem="UXa-sl-pDx" secondAttribute="centerY" id="jaI-HH-1ZV"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="DxG-TL-C1K"/>
+                    <tabBarItem key="tabBarItem" title="Сообщества" image="person.3.fill" catalog="system" id="Kju-YI-ouB"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ibE-RM-Ri7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kQ7-IV-0Na" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="825" y="94"/>
+            <point key="canvasLocation" x="1260" y="360"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Hn4-Mp-goz">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="c33-Eu-auh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E3n-eM-xdp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ycS-TR-AUr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PbD-Ef-cIn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pJE-5t-VvF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2151" y="360"/>
+        </scene>
+        <!--Друзья-->
+        <scene sceneID="APG-o6-5OX">
+            <objects>
+                <viewController storyboardIdentifier="tapbar1" id="3E1-0I-BBI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P72-6A-rlr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="anN-0V-CLJ">
+                                <rect key="frame" x="125" y="413.5" width="164" height="30"/>
+                                <state key="normal" title="Переход к коллекциям"/>
+                                <connections>
+                                    <segue destination="AEK-jy-XH9" kind="presentation" id="wQ7-ZN-ZFG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QsN-bR-Hio"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="anN-0V-CLJ" firstAttribute="centerX" secondItem="QsN-bR-Hio" secondAttribute="centerX" id="JKv-34-rdk"/>
+                            <constraint firstItem="anN-0V-CLJ" firstAttribute="centerY" secondItem="QsN-bR-Hio" secondAttribute="centerY" id="qWp-Zm-smb"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Друзья" image="person.fill" catalog="system" id="A0T-tG-Ha2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3FS-7i-utP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1259" y="-294"/>
+        </scene>
+        <!--Collection View Controller-->
+        <scene sceneID="aAI-bY-ZDI">
+            <objects>
+                <collectionViewController modalPresentationStyle="fullScreen" id="AEK-jy-XH9" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="UE8-26-aDO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zZ9-TD-78T">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gD0-A5-ABB">
+                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="PYU-FV-YCh">
+                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionViewCellContentView>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="AEK-jy-XH9" id="asG-BY-p0c"/>
+                            <outlet property="delegate" destination="AEK-jy-XH9" id="f5V-fi-DVy"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="24s-xo-me8"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xf9-h1-gM0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2151" y="-295"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="vzl-CT-ErZ">
+            <objects>
+                <tabBarController storyboardIdentifier="TapBar" modalPresentationStyle="fullScreen" id="5gf-98-S0h" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="YsF-2c-6I1"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="43i-NF-EUb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="3E1-0I-BBI" kind="relationship" relationship="viewControllers" id="99W-GK-d2v"/>
+                        <segue destination="jeN-kt-ezs" kind="relationship" relationship="viewControllers" id="Kq7-dp-8By"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IVM-fa-ZGg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="370" y="56"/>
         </scene>
     </scenes>
     <resources>
+        <image name="person.3.fill" catalog="system" width="128" height="61"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
