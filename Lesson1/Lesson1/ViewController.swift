@@ -6,7 +6,7 @@
 //
 
 import UIKit
-//
+//тест
 class ViewController: UIViewController {
     
     @IBOutlet var loginInput: UITextField!

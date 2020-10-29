@@ -69,6 +69,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8km-cI-j0U">
                                 <rect key="frame" x="127" y="433" width="161" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="Переход на новое вью"/>
                                 <connections>
                                     <segue destination="c33-Eu-auh" kind="show" id="Fcz-yP-Unn"/>
