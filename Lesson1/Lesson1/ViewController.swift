@@ -6,7 +6,6 @@
 //
 
 import UIKit
-//тест
 class ViewController: UIViewController {
     
     @IBOutlet var loginInput: UITextField!
@@ -30,13 +29,8 @@ class ViewController: UIViewController {
         }
     }
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
 }
 
