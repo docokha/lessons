@@ -11,11 +11,10 @@ class TableViewCellFreinds: UITableViewCell {
     
     @IBOutlet weak var labelFreind: UILabel!
     @IBOutlet weak var photoFreind: UIImageView!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-        photoFreind.layer.cornerRadius = 5
-        photoFreind.clipsToBounds = true
+        photoFreind.layer.cornerRadius = photoFreind.frame.height/2
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
