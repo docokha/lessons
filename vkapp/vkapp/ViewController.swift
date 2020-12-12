@@ -24,10 +24,8 @@ class ViewController: UIViewController {
         let vc = storyboard.instantiateViewController(withIdentifier: "Menu")
         
         if login == "admin" && password == "123456" {
-            print("okay")
             present(vc, animated: true, completion: nil)
         } else {
-            print("error")
             let alert = UIAlertController(title: "Ошибка", message: "Введены неверные данные пользователя", preferredStyle: .alert)
             let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alert.addAction(action)
