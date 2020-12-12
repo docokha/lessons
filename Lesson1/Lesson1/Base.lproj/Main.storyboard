@@ -192,10 +192,10 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="qRh-gp-QX3" firstAttribute="top" secondItem="9Ju-yc-lcq" secondAttribute="top" constant="8" id="QUI-6X-bAJ"/>
-                                        <constraint firstItem="qRh-gp-QX3" firstAttribute="leading" secondItem="9Ju-yc-lcq" secondAttribute="leading" constant="8" id="cCK-gw-J8E"/>
-                                        <constraint firstItem="qRh-gp-QX3" firstAttribute="width" secondItem="9Ju-yc-lcq" secondAttribute="width" multiplier="0.75" id="jhV-h4-whN"/>
-                                        <constraint firstItem="qRh-gp-QX3" firstAttribute="height" secondItem="9Ju-yc-lcq" secondAttribute="height" multiplier="0.75" id="vHX-h6-jxD"/>
+                                        <constraint firstItem="qRh-gp-QX3" firstAttribute="leading" secondItem="9Ju-yc-lcq" secondAttribute="leading" constant="8" id="ESf-Uz-L7c"/>
+                                        <constraint firstItem="qRh-gp-QX3" firstAttribute="top" secondItem="9Ju-yc-lcq" secondAttribute="top" constant="8" id="MMs-EM-1Oe"/>
+                                        <constraint firstAttribute="trailing" secondItem="qRh-gp-QX3" secondAttribute="trailing" constant="24" id="aXf-2e-GsM"/>
+                                        <constraint firstAttribute="bottom" secondItem="qRh-gp-QX3" secondAttribute="bottom" constant="24" id="lgw-Bk-Ydp"/>
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <connections>
