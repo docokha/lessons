@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B735EF7425A4BCD700C0D5E4 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B735EF7325A4BCD700C0D5E4 /* CustomView.swift */; };
 		B753F7F3255304790075E5D2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B753F7F2255304790075E5D2 /* User.swift */; };
 		B753F7F7255317E10075E5D2 /* TableViewControllerSearchGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B753F7F6255317E10075E5D2 /* TableViewControllerSearchGroup.swift */; };
 		B753F8002553B84B0075E5D2 /* TableViewCellSearchGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B753F7FF2553B84B0075E5D2 /* TableViewCellSearchGroup.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B735EF7325A4BCD700C0D5E4 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		B753F7F2255304790075E5D2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B753F7F6255317E10075E5D2 /* TableViewControllerSearchGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerSearchGroup.swift; sourceTree = "<group>"; };
 		B753F7FF2553B84B0075E5D2 /* TableViewCellSearchGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellSearchGroup.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 			children = (
 				B7ABA904254EF74C00A2BC25 /* TableViewControllerFreinds.swift */,
 				B7ABA907254EFE4B00A2BC25 /* TableViewCellFreinds.swift */,
+				B735EF7325A4BCD700C0D5E4 /* CustomView.swift */,
 			);
 			path = Freinds;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				B7C41ED42550FE9B004FC8B4 /* CollectionViewCellFreind.swift in Sources */,
 				B7DA26652545BB6F0020333A /* ViewController.swift in Sources */,
 				B7ABA910254F0D1100A2BC25 /* TableViewControllerGroup.swift in Sources */,
+				B735EF7425A4BCD700C0D5E4 /* CustomView.swift in Sources */,
 				B7C41ED02550FD91004FC8B4 /* CollectionViewControllerFreind.swift in Sources */,
 				B7DA26612545BB6F0020333A /* AppDelegate.swift in Sources */,
 				B7ABA905254EF74C00A2BC25 /* TableViewControllerFreinds.swift in Sources */,

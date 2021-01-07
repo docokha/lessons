@@ -15,6 +15,7 @@ class CollectionViewCellFreind: UICollectionViewCell {
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var countLike: UILabel!
     
+    
     var tap: Bool = false
     var likes: Int = 0
     

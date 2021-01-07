@@ -10,10 +10,10 @@ import UIKit
 class TableViewCellFreinds: UITableViewCell {
     
     @IBOutlet weak var labelFreind: UILabel!
-    @IBOutlet weak var photoFreind: UIImageView!
+    @IBOutlet weak var photoFreind: CustomView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        photoFreind.layer.cornerRadius = photoFreind.frame.height/2
         
     }
 
