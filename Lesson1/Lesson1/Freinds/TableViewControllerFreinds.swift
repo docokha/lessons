@@ -16,8 +16,8 @@ class TableViewControllerFreinds: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.estimatedRowHeight = 40.0
-        tableView.rowHeight = UITableView.automaticDimension
+        //tableView.estimatedRowHeight = 40.0
+        //tableView.rowHeight = UITableView.automaticDimension
     }
 
    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -33,9 +33,8 @@ class TableViewControllerFreinds: UITableViewController {
         let photo = baseUsers[indexPath.row].photo
         
         cell.labelFreind.text = name
-        cell.photoFreind.image = UIImage(named: "\(photo)")
- 
         
+        cell.photoFreind.setImage(UIImage(named: "\(photo)")!)
 
         return cell
     }
@@ -49,7 +48,6 @@ class TableViewControllerFreinds: UITableViewController {
         let indexPath = self.tableView.indexPathForSelectedRow
         let nameUser = baseUsers[indexPath!.row].name
         
-        //vc1?.labelName = nameUser
         vc1?.photoUser = UIImage(named: "\(baseUsers[indexPath!.row].photo)")
     }
 }
