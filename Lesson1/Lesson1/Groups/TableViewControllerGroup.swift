@@ -9,32 +9,55 @@ import UIKit
 
 class TableViewControllerGroup: UITableViewController {
     
-    var myGroups = [String]()
-    var myGroupsPhoto = [UIImage]()
+    //var myGroups = [String]()
+    //var myGroupsPhoto = [UIImage]()
+    
+    var baseGroups: GroupsListClass.GroupsStruct? = nil
+    var cacheImages = NSCache<AnyObject, AnyObject>()
+    private let networkManager: NetworkManager = NetworkManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.estimatedRowHeight = 40.0
         tableView.rowHeight = UITableView.automaticDimension
+        
+        networkManager.getResult(method: .getGroupsList) { (dataArray) in
+            self.baseGroups = dataArray as? GroupsListClass.GroupsStruct
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+            
+        }
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return myGroups.count
+        return baseGroups?.response.items.count ?? 0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GroupCell", for: indexPath) as! TableViewCellGroup
         
-        let nameGroup = myGroups[indexPath.row]
-        cell.labelGroup.text = nameGroup
+        cell.labelGroup.text = baseGroups?.response.items[indexPath.row].name
         
-        let photoGroup = myGroupsPhoto[indexPath.row]
-        cell.photoGroup.image = photoGroup
-        
+        //cell.photoGroup.image = photoGroup
+
         cell.layoutIfNeeded()
         cell.photoGroup.layer.cornerRadius = cell.photoGroup.frame.height/2
+        
+        if let img = cacheImages.object(forKey: baseGroups?.response.items[indexPath.row].photo100 as AnyObject) {
+            cell.photoGroup.image = img as? UIImage
+        } else {
+            DispatchQueue.global().async {
+                let data = NSData(contentsOf: URL(string: (self.baseGroups?.response.items[indexPath.row].photo100)!)!)
+                DispatchQueue.main.async {
+                    cell.photoGroup.image = UIImage(data: data! as Data)
+                    self.cacheImages.setObject(UIImage(data: data! as Data)!, forKey: self.baseGroups?.response.items[indexPath.row].photo100 as AnyObject)
+                }
+            }
+        }
 
         return cell
     }
@@ -42,7 +65,7 @@ class TableViewControllerGroup: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
-    
+    /*
     @IBAction func addGroup(segue: UIStoryboardSegue) {
                 if segue.identifier == "addGroup" {
                     let myFreindsVC = segue.source as! TableViewControllerSearchGroup
@@ -97,6 +120,6 @@ class TableViewControllerGroup: UITableViewController {
         
         addGroup?.allGroups = allGroups
         addGroup?.allGroupsAvatars = allGroupsPhotos
-    }
+    }*/
 
 }

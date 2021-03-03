@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vOD-in-UYc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="t9n-DC-jOA">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -17,42 +17,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="passwordInput" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jFA-O2-ZAo">
-                                <rect key="frame" x="44" y="386" width="326" height="34"/>
-                                <accessibility key="accessibilityConfiguration" identifier="passwordInput"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k5Y-Mg-4Ke">
-                                <rect key="frame" x="39" y="437" width="337" height="30"/>
-                                <state key="normal" title="Войти"/>
-                                <connections>
-                                    <action selector="TapButtonOne:" destination="t9n-DC-jOA" eventType="touchUpInside" id="i9r-FS-UG0"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Логин" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vsb-G6-1Ow">
-                                <rect key="frame" x="44" y="335" width="326" height="34"/>
-                                <accessibility key="accessibilityConfiguration" identifier="loginInput"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oDh-bP-y9S">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="27U-yT-zzp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vsb-G6-1Ow" firstAttribute="leading" secondItem="27U-yT-zzp" secondAttribute="leading" constant="44" id="7fy-UO-dKO"/>
-                            <constraint firstItem="k5Y-Mg-4Ke" firstAttribute="top" secondItem="jFA-O2-ZAo" secondAttribute="bottom" constant="18" id="C3b-kg-VVI"/>
-                            <constraint firstItem="k5Y-Mg-4Ke" firstAttribute="centerX" secondItem="27U-yT-zzp" secondAttribute="centerX" id="F4b-jL-I13"/>
-                            <constraint firstItem="jFA-O2-ZAo" firstAttribute="top" secondItem="vsb-G6-1Ow" secondAttribute="bottom" constant="17" id="Ixg-dO-kjR"/>
-                            <constraint firstItem="k5Y-Mg-4Ke" firstAttribute="centerY" secondItem="27U-yT-zzp" secondAttribute="centerY" id="Jdf-Ek-qac"/>
-                            <constraint firstItem="jFA-O2-ZAo" firstAttribute="leading" secondItem="27U-yT-zzp" secondAttribute="leading" constant="44" id="L67-zI-pd6"/>
-                            <constraint firstItem="27U-yT-zzp" firstAttribute="trailing" secondItem="jFA-O2-ZAo" secondAttribute="trailing" constant="44" id="Pkb-JA-q67"/>
-                            <constraint firstItem="27U-yT-zzp" firstAttribute="trailing" secondItem="vsb-G6-1Ow" secondAttribute="trailing" constant="44" id="bbd-lk-vwQ"/>
+                            <constraint firstItem="oDh-bP-y9S" firstAttribute="top" secondItem="27U-yT-zzp" secondAttribute="top" id="8E9-8x-TSC"/>
+                            <constraint firstItem="27U-yT-zzp" firstAttribute="trailing" secondItem="oDh-bP-y9S" secondAttribute="trailing" id="JBE-d3-xQZ"/>
+                            <constraint firstItem="27U-yT-zzp" firstAttribute="bottom" secondItem="oDh-bP-y9S" secondAttribute="bottom" id="RH0-35-RlC"/>
+                            <constraint firstItem="oDh-bP-y9S" firstAttribute="leading" secondItem="27U-yT-zzp" secondAttribute="leading" id="ZGA-Ra-2tq"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="loginInput" destination="vsb-G6-1Ow" id="3DD-Ug-gYo"/>
-                        <outlet property="passwordInput" destination="jFA-O2-ZAo" id="1JS-4F-VQV"/>
+                        <outlet property="webView" destination="oDh-bP-y9S" id="1KQ-QS-YpG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ddX-em-ruv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
